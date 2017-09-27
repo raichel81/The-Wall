@@ -47,7 +47,7 @@ def logout(request):
 def add(request):
     current_user = get_current_user(request)
     context={
-        'current_user': current_user.first_name,
+        'current_user': current_user,
         'form3': AddForm(),
     }
     return render(request, 'wall/add.html', context)
